@@ -1,6 +1,6 @@
 # Human-computer interaction project.
 
-### Project is done in C# and is a desktop GUI program.
+### The project is done in C# and is a desktop GUI program.
 The project has different roles (admin, organizer, and user).
 User can:
 - ask for an event to be organized
