@@ -1,0 +1,9 @@
+1;jeca@gmail.com;Nema organizatora;1234;Zurka;12/30/2021 12:00:00 PM;17000;20;Nema komentara;16 rodjendan;Zakazana;Nema stolova
+2;jeca@gmail.com;Nema organizatora;123456781;Zurka;12/30/2021 12:00:00 PM;8000;10;Malo vise pice;Malo porodicno okupljanje;Zakazana;Nema stolova
+3;aca@gmail.com;Nema organizatora;123456781;Svadba;12/30/2021 12:00:00 PM;8000;10;Vise stolica;Svadba Rajkova;Otkazana;Nema stolova
+4;aca@gmail.com;Nema organizatora;123456781;Zurka;12/25/2021 12:00:00 PM;8000;10;Dosta alkohola;18 rodjendan;Otkazana;Nema stolova
+5;jeca@gmail.com;s@s;1234;Rodjendan;12/31/2000 12:00:00 AM;7500;100;Komentar;Markov Rodjendan;Zakazana;Nema stolova
+6;aca@gmail.com;uki@gmail.com;1234443;Zurka;12/31/2000 12:00:00 AM;75000;200;Velika zurka klubbing;Club rave;Zakazana;Nema stolova
+7;aca@gmail.com;uki@gmail.com;1234443;Krstenje;12/31/2000 12:00:00 AM;25000;60;Krstenje deteta, velika torta;Krstenje Deteta;Zakazana;Nema stolova
+8;dule@gmail.com;uki@gmail.com;432343;Kupanje;12/31/2000 12:00:00 AM;150;3;Bazen;Kupanjac;Zakazana;Nema stolova
+9;dule@gmail.com;feder@gmail.com;435345;Susenje;12/31/2000 12:30:00 PM;50;2;Bazen;Nesto sa vodom;Zakazana;Nema stolova

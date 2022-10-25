@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="HCI_Projekat.MVVM.View.UserPersonalInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HCI_Projekat.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="770">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="182*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="194*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Ime i Prezime Klijenta"
+           Grid.Row="0"
+           Grid.Column="0"
+           FontSize="18" Margin="93,38,67,82"/>
+        <TextBox Name="ImePrez"
+            Style="{StaticResource PrazanTextBox}" 
+            Margin="76,70,33,30" 
+            RenderTransformOrigin="0.5,0.5"/>
+        <Label Content="Email Adresa Klijenta"
+            Grid.Column="0"
+            FontSize="18" Margin="93,144,67,119" Grid.RowSpan="2"/>
+        <TextBox Name="Email"
+            Style="{StaticResource PrazanTextBox}" 
+            Margin="76,15,33,85" 
+            RenderTransformOrigin="0.5,0.5" Grid.Row="1"/>
+        <Button Content="Azuriraj Informacije"
+                Margin="276,62,284,44"
+                FontSize="18"
+                Background="#131d5e"
+                Foreground="White" 
+                Grid.Row="3"
+                Grid.ColumnSpan="3" Click="Button_Click"/>
+        <Label Content="Odaberi Saradnika"
+            Grid.Row="1"
+            Grid.Column="0"
+            FontSize="18" Margin="93,95,67,25"/>
+        <TextBox Style="{StaticResource PrazanTextBox}" 
+            Margin="76,127,33,135" 
+            RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.RowSpan="2"/>
+        <Label Content="Tema Proslave"
+            Grid.Row="2"
+            Grid.Column="0"
+            FontSize="18" Margin="93,43,67,76"/>
+        <TextBox Style="{StaticResource PrazanTextBox}" 
+            Margin="76,75,33,24" 
+            RenderTransformOrigin="0.5,0.5" Grid.Row="2"/>
+        <Label Content="Ime i Prezime Klijenta"
+            Grid.Row="0"
+            Grid.Column="2"
+            FontSize="18" Margin="61,38,123,82"/>
+        <TextBox Style="{StaticResource PrazanTextBox}" 
+            Margin="44,70,89,30" 
+            RenderTransformOrigin="0.5,0.5" Grid.Column="2"/>
+        <Label Content="Email Adresa Klijenta"
+            Grid.Column="2"
+            FontSize="18" Margin="61,144,123,119" Grid.RowSpan="2"/>
+        <TextBox Style="{StaticResource PrazanTextBox}" 
+            Margin="44,15,89,85" 
+            RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.Column="2"/>
+        <Label Content="Odaberi Saradnika"
+            Grid.Row="1"
+            Grid.Column="2"
+            FontSize="18" Margin="61,95,123,25"/>
+        <TextBox Style="{StaticResource PrazanTextBox}" 
+            Margin="44,127,89,135" 
+            RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.RowSpan="2" Grid.Column="2"/>
+        <Label Content="Tema Proslave"
+            Grid.Row="2"
+            Grid.Column="2"
+            FontSize="18" Margin="61,43,123,76"/>
+        <TextBox Style="{StaticResource PrazanTextBox}" 
+            Margin="44,75,89,24" 
+            RenderTransformOrigin="0.5,0.5" Grid.Row="2" Grid.Column="2"/>
+    </Grid>
+</UserControl>

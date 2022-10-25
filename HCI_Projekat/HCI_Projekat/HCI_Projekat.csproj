@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E644AD75-975A-4088-8C1D-7F7CDCFF1345}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HCI_Projekat</RootNamespace>
+    <AssemblyName>HCI_Projekat</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\IO\IO.cs" />
+    <Compile Include="MVVM\Model\Korisnik.cs" />
+    <Compile Include="MVVM\Model\Liste.cs" />
+    <Compile Include="MVVM\Model\Proslava.cs" />
+    <Compile Include="MVVM\Model\Saradnik.cs" />
+    <Compile Include="MVVM\Model\Sto.cs" />
+    <Compile Include="MVVM\ViewModel\AdminGotoveProslaveviewModel.cs" />
+    <Compile Include="MVVM\ViewModel\AdminKrProslavuViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\AdminKrSaradnikaViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\AdminTrenutneProslaveViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\AdminTrenutniSaradniciViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\AdminViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\OrganizatorViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\OrgGotoveProslaveViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\OrgKrProslavuViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\OrgKrSaradnikaViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\OrgTrenutneProslaveViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\OrgTrenutniSaradniciViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\UserGotoveProslaveViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\UserKrProslavuViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\UserPersonalInfoViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\UserSpisakGostijuViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\UserTrenutneProslaveViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\UserViewModel.cs" />
+    <Compile Include="MVVM\View\AdminGotoveProslaveView.xaml.cs">
+      <DependentUpon>AdminGotoveProslaveView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\AdminKrProslavuView.xaml.cs">
+      <DependentUpon>AdminKrProslavuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\AdminKrSaradnikaView.xaml.cs">
+      <DependentUpon>AdminKrSaradnikaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\AdminTrenutneProslaveView.xaml.cs">
+      <DependentUpon>AdminTrenutneProslaveView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\AdminTrenutniSaradniciView.xaml.cs">
+      <DependentUpon>AdminTrenutniSaradniciView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\OrgGotoveProslaveView.xaml.cs">
+      <DependentUpon>OrgGotoveProslaveView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\OrgKrProslavuView.xaml.cs">
+      <DependentUpon>OrgKrProslavuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\OrgKrSaradnikaView.xaml.cs">
+      <DependentUpon>OrgKrSaradnikaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\OrgTrenutneProslaveView.xaml.cs">
+      <DependentUpon>OrgTrenutneProslaveView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\OrgTrenutniSaradniciView.xaml.cs">
+      <DependentUpon>OrgTrenutniSaradniciView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\UserGotoveProslaveView.xaml.cs">
+      <DependentUpon>UserGotoveProslaveView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\UserKrProslavuView.xaml.cs">
+      <DependentUpon>UserKrProslavuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\UserPersonalInfoView.xaml.cs">
+      <DependentUpon>UserPersonalInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\UserSpisakGostijuView.xaml.cs">
+      <DependentUpon>UserSpisakGostijuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\UserTrenutneProslaveView.xaml.cs">
+      <DependentUpon>UserTrenutneProslaveView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizatorWindow.xaml.cs">
+      <DependentUpon>OrganizatorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RasporedSedenja.xaml.cs">
+      <DependentUpon>RasporedSedenja.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserWindow.xaml.cs">
+      <DependentUpon>UserWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ObservableObject.cs" />
+    <Compile Include="Core\RelayCommand.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MVVM\View\AdminGotoveProslaveView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\AdminKrProslavuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\AdminKrSaradnikaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\AdminTrenutneProslaveView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\AdminTrenutniSaradniciView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\OrgGotoveProslaveView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\OrgKrProslavuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\OrgKrSaradnikaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\OrgTrenutneProslaveView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\OrgTrenutniSaradniciView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\RegisterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\UserGotoveProslaveView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\UserKrProslavuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\UserPersonalInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\UserSpisakGostijuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\UserTrenutneProslaveView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrganizatorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RasporedSedenja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\MenuButtonTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\TextboxTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MVVM\ViewModel\LoginViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\RegisterViewModel.cs" />
+    <Compile Include="MVVM\View\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\RegisterView.xaml.cs">
+      <DependentUpon>RegisterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="MVVM\Data\gosti.csv" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\arrow.png" />
+    <Resource Include="MVVM\Data\proslave.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\island.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MVVM\Data\korisnici.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\goreArrow.png" />
+    <Resource Include="MVVM\Data\saradnici.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MVVM\Data\stolovi.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\lupa.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

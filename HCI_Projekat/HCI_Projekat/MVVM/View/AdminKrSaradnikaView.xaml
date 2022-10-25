@@ -1,0 +1,109 @@
+﻿<UserControl x:Class="HCI_Projekat.MVVM.View.AdminKrSaradnikaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HCI_Projekat.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="770">
+    <UserControl.Resources>
+        <Image x:Key="Gore" Source="pack://application:,,,/Images/goreArrow.png"/>
+        <Image x:Key="Dole" Source="pack://application:,,,/Images/arrow.png"/>
+        <Image x:Key="Gore2" Source="pack://application:,,,/Images/goreArrow.png"/>
+        <Image x:Key="Dole2" Source="pack://application:,,,/Images/arrow.png"/>
+    </UserControl.Resources>
+    <Grid>
+        <Rectangle Fill="#413469"
+                   RadiusX="10"
+                   RadiusY="10"
+                   StrokeDashArray="2"
+                   StrokeThickness="3"
+                   Stroke="Silver" Margin="367,200,33,251"/>
+        <Label Content="_PIB Lokala"
+            Grid.Row="0"
+            Target="{Binding ElementName=PIB}"
+            Grid.Column="0"
+            FontSize="18" Margin="57,37,509,570"/>
+        <TextBox Style="{StaticResource PrazanTextBox}" 
+            Margin="40,69,475,518" 
+            Name="PIB"
+            RenderTransformOrigin="0.5,0.5"/>
+        <Label Content="_Ime Lokala"
+            Target="{Binding ElementName=Lokal}"
+            Grid.Column="0"
+            FontSize="18" Margin="57,143,509,444"/>
+        <TextBox Style="{StaticResource PrazanTextBox}" 
+            Margin="40,177,475,410"
+            Name="Lokal"
+            RenderTransformOrigin="0.5,0.5"/>
+        <Button Content="_Kreiraj Saradnika"
+            Margin="315,543,247,42"
+            FontSize="18"
+            Background="#131d5e"
+            Foreground="White" Click="Button_Click"/>
+        <Label Content="Kapacitet _Sale"
+            Target="{Binding ElementName=Kapacitet}"
+            FontSize="18" Margin="383,26,211,581"/>
+        <TextBox Style="{StaticResource MoneyTxtBox}" 
+            Margin="367,69,227,518" 
+            Name="Kapacitet"
+            RenderTransformOrigin="0.5,0.5"/>
+        <Label Content="Broj S_tolova"
+            Target="{Binding ElementName=Stolovi}"
+            FontSize="18" Margin="581,26,-133,581"/>
+        <TextBox Style="{StaticResource MoneyTxtBox}" 
+            Margin="563,69,33,518" 
+            Name="Stolovi"
+            RenderTransformOrigin="0.5,0.5"/>
+        <Label Content="_Adresa Lokala"
+            Grid.Row="0"
+            Target="{Binding ElementName=Adresa}"
+            Grid.Column="0"
+            FontSize="18" Margin="57,253,509,354"/>
+        <TextBox Style="{StaticResource PrazanTextBox}" 
+            Margin="40,285,475,302" 
+            Name="Adresa"
+            RenderTransformOrigin="0.5,0.5"/>
+        <Button Content="Odaberi _Fotografiju"
+            Margin="462,404,123,189"
+            FontSize="15"
+            Background="#131d5e"
+            Foreground="White"/>
+        <Label Content="Fotografija Lokala"
+            Target="{Binding ElementName=ImeKlijenta}"
+            FontSize="18" Margin="383,153,211,444"/>
+        <Image
+               Name="Slika"
+               Margin="403,206,63,257"/>
+        <Label Content="Saradnik"
+            Grid.Row="0"
+            Target="{Binding ElementName=Adresa}"
+            Grid.Column="0"
+            FontSize="18" Margin="57,366,509,241"/>
+        <TextBox Style="{StaticResource SaradnikTxtBox}"
+            Margin="40,398,475,189" 
+            x:Name="Adresa_Copy"
+            RenderTransformOrigin="0.5,0.5"/>
+        <Button
+            Margin="227,409,486,198" 
+            x:Name="DropDownDugme"
+            BorderThickness="0" Click="DropDownDugme_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Rectangle
+            Name="ListboxPravougaonik"
+            Fill="#413469"
+            RadiusX="10"
+            RadiusY="10" 
+            Visibility="Hidden"
+            Margin="40,466,475,0"/>
+        <ListBox Background="Transparent"
+                 Visibility="Hidden"
+                 BorderThickness="0"
+                 Name="SaradniciListBox"
+            Margin="50,472,486,5"/>
+
+    </Grid>
+</UserControl>

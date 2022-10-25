@@ -1,0 +1,77 @@
+﻿<Application x:Class="HCI_Projekat.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:HCI_Projekat"
+             xmlns:viewModel="clr-namespace:HCI_Projekat.MVVM.ViewModel"
+             xmlns:view="clr-namespace:HCI_Projekat.MVVM.View"
+
+             StartupUri="MainWindow.xaml">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/TextboxTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            
+            
+            <DataTemplate DataType="{x:Type viewModel:LoginViewModel}">
+                <view:LoginView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:RegisterViewModel}">
+                <view:RegisterView/>
+            </DataTemplate>
+
+            
+            
+            <DataTemplate DataType="{x:Type viewModel:UserPersonalInfoViewModel}">
+                <view:UserPersonalInfo/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:UserKrProslavuViewModel}">
+                <view:UserKrProslavuView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:UserTrenutneProslaveViewModel}">
+                <view:UserTrenutneProslaveView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:UserGotoveProslaveViewModel}">
+                <view:UserGotoveProslaveView/>
+            </DataTemplate>
+
+
+
+            <DataTemplate DataType="{x:Type viewModel:OrgTrenutneProslaveViewModel}">
+                <view:OrgTrenutneProslaveView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:OrgTrenutniSaradniciViewModel}">
+                <view:OrgTrenutniSaradniciView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:OrgKrProslavuViewModel}">
+                <view:OrgKrProslavuView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:OrgKrSaradnikaViewModel}">
+                <view:OrgKrSaradnikaView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:OrgGotoveProslaveViewModel}">
+                <view:OrgGotoveProslaveView/>
+            </DataTemplate>
+
+
+            <DataTemplate DataType="{x:Type viewModel:AdminKrProslavuViewModel}">
+                <view:AdminKrProslavuView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:AdminKrSaradnikaViewModel}">
+                <view:AdminKrSaradnikaView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:AdminTrenutneProslaveViewModel}">
+                <view:AdminTrenutneProslaveView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:AdminTrenutniSaradniciViewModel}">
+                <view:AdminTrenutniSaradniciView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:AdminGotoveProslaveviewModel}">
+                <view:AdminGotoveProslaveView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

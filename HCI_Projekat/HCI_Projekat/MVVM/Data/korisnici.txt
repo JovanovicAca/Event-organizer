@@ -1,0 +1,7 @@
+Boris;Tadic;boki@hotmail.com;sifra;Musko;31-Dec-00 00:01:00;organizator
+Jelena;Acimovic;jeca@gmail.com;123;Zensko;31-Dec-00 00:02:00;klijent
+Marko;Vuk;marko@gmail.com;1234;Musko;31-Dec-00 00:02:00;admin
+Aca;Jo;aca@gmail.com;1234;Zensko;31-Dec-00 00:02:00;klijent
+Dusan;H;dule@gmail.com;1234;Musko;31-Dec-00 00:02:00;klijent
+Nikola;Pero;feder@gmail.com;1234;Musko;31-Dec-00 00:02:00;organizator
+Uki;Bla Bla;uki@gmail.com;1234;Musko;31-Dec-00 00:02:00;organizator

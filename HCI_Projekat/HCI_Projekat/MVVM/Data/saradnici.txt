@@ -1,0 +1,12 @@
+123456546;Restoran 1;KS;100;20;Nema slike
+123456782;Hala 23;Ulicica;12;21;file:///C:/Users/crazy/Documents/ViberDownloads/0-02-0a-0d54e484a0a646177bc6851e77d9e1e821b1ecea46df05ef397be2ed1e0fc5a0_2b6ce1884b26ea65.jpg
+123456781;Lokal 1;Ulica1;213;312;file:///C:/Users/crazy/Documents/ViberDownloads/0-02-0a-01c6fcaa838d03545689d10a23a15acd468169c215c153e233a38560cc2811fe_7b843451.jpg
+123456435;Restoranko;RD 5555;210;40;file:///C:/Users/blast/Desktop/Bolji-GIGSTIX-main/Bolji-GIGSTIX-main/static/images-manifestations/zdravko.jpg
+111111111;Mali lokalcic;Bulevar 2;2;3;Nema slike
+333333333;Podrum;Bulevar 23;21;10;file:///C:/Users/crazy/Documents/ViberDownloads/0-02-0a-0dbd010316e0e0a1d17ef0d1058051bef2e5510c6d02a5809334e3b8b2c3af6e_21112767.jpg
+444444444;Club 69;Bulevar 69;300;0;Nema slike
+555555555;Restoran 55;Ulica23;100;40;Nema slike
+666666666;Soba 14;xxx;10;2;file:///C:/Users/crazy/Documents/ViberDownloads/0-02-0a-01c6fcaa838d03545689d10a23a15acd468169c215c153e233a38560cc2811fe_7b843451.jpg
+123456789;Splav;Voda;230;20;Nema slike
+654786980;Party Bus;Put neki;50;0;Nema slike
+234355532;Gradski bazen;Centar;150;15;Nema slike

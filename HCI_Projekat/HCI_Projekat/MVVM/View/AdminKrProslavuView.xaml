@@ -1,0 +1,164 @@
+﻿<UserControl x:Class="HCI_Projekat.MVVM.View.AdminKrProslavuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HCI_Projekat.MVVM.View"
+            mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="770">
+    <UserControl.Resources>
+        <Image x:Key="Gore" Source="pack://application:,,,/Images/goreArrow.png"/>
+        <Image x:Key="Dole" Source="pack://application:,,,/Images/arrow.png"/>
+        <Image x:Key="Gore2" Source="pack://application:,,,/Images/goreArrow.png"/>
+        <Image x:Key="Dole2" Source="pack://application:,,,/Images/arrow.png"/>
+
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="182*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="194*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="_Ime i Prezime Klijenta"
+           Target="{Binding ElementName=ImePrezTxtBot}"
+           Grid.Row="0"
+           Grid.Column="0"
+           FontSize="18" Margin="60,33,100,87"/>
+        <TextBox Style="{StaticResource PrazanTextBox}" 
+            Margin="43,65,66,35"
+            RenderTransformOrigin="0.5,0.5"
+            Name="ImePrezTxtBot"/>
+        <Label Content="_Email Adresa Klijenta"
+            Target="{Binding ElementName=EmailTxtBox}"
+            Grid.Column="0"
+            FontSize="18" Margin="60,139,100,124" Grid.RowSpan="2"/>
+        <TextBox Style="{StaticResource EmailRegisterTextBox}" 
+            Margin="43,10,66,90" 
+            RenderTransformOrigin="0.5,0.5" Grid.Row="1"
+            Name="EmailTxtBox"/>
+        <Label Content="_Tema Proslave"
+            Target="{Binding ElementName=BudzetTxtBox}"
+            FontSize="18" Margin="4,130,208,153" Grid.Column="2" Grid.RowSpan="2"/>
+        <TextBox Style="{StaticResource MoneyTxtBox}" 
+            Margin="6,10,224,90" 
+            RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1"
+            Name="BudzetTxtBox"/>
+        <Label Content="Raspored Stolova"
+            Target="{Binding ElementName=KapacitetTxtBox}"
+            Grid.Column="2"
+            FontSize="18" Margin="185,130,-119,153" Grid.RowSpan="2"/>
+        <Label Content="Dodatni Komenta_r"
+            Grid.Column="2"
+            Target="{Binding ElementName=KomentarTxtBox}"
+            FontSize="18" Margin="84,110,94,9" Grid.Row="1"/>
+        <TextBox Style="{StaticResource Komentar2TxtBox}" 
+            Margin="320,138,-26,29" 
+            RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" Grid.ColumnSpan="3" Grid.Row="1"
+            Name="KomentarTxtBox"/>
+        <Button Content="_Kreiraj Proslavu"
+                Margin="277,79,283,27"
+                FontSize="18"
+                Background="#131d5e"
+                Foreground="White" 
+                Grid.Row="3" 
+                Grid.ColumnSpan="3" Click="Button_Click"/>
+        <Label Content="_Saradnik"
+            Target="{Binding ElementName=DropDownDugme}"
+            Grid.Row="1"
+            Grid.Column="0"
+            FontSize="18" Margin="60,90,100,30"/>
+        <TextBox Style="{StaticResource SaradnikTxtBox}"
+            IsReadOnly="True"
+            Margin="43,122,66,140" 
+            RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.RowSpan="2"/>
+        <Button
+            Margin="240,138,86,156" 
+            Name="DropDownDugme"
+            Grid.Row="1"
+            BorderThickness="0"
+            Grid.RowSpan="2" Click="DropDownDugme_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Label Content="_Organizator"
+            Target="{Binding ElementName=TemaTxtBox}"
+            Grid.Row="2"
+            Grid.Column="0"
+            FontSize="18" Margin="60,38,100,81"/>
+
+        <Label Content="_Datum Proslave"
+            Target="{Binding ElementName=Datum}"
+            FontSize="18" Margin="4,22,208,98" Grid.Column="2"/>
+        <Label Content="Budzet Proslave"
+            Target="{Binding ElementName=BrStolovaTxtBox}"
+            Grid.Column="2"
+            FontSize="18" Margin="185,22,-119,98"/>
+        <TextBox Style="{StaticResource MoneyTxtBox}" 
+            Margin="184,65,30,35" 
+            RenderTransformOrigin="0.5,0.5" Grid.Column="2"
+            Name="BrStolovaTxtBox"/>
+        <DatePicker x:Name="Datum"
+            SelectedDate="2000-12-31"
+            FontSize="25"
+            Foreground="Black"
+            BorderThickness="0"
+            Margin="0,65,224,25" 
+            RenderTransformOrigin="0.499,0.928" Grid.Column="2"/>
+        <TextBox Style="{StaticResource OrgTxtBox}"
+            IsReadOnly="True"
+            Margin="43,70,66,29" 
+            RenderTransformOrigin="0.5,0.5" Grid.Row="2"/>
+        <Button
+            Margin="240,86,86,45" 
+            x:Name="DropDownDugme2"
+            Grid.Row="2"
+            BorderThickness="0" Click="DropDownDugme2_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button Content="Prikazi Raspored"
+            Margin="197,10,42,96"
+            x:Name="RasporedDugme"
+            FontSize="18"
+            Background="#3a0646"
+            Foreground="White" Grid.Column="2" Grid.Row="1" Click="RasporedDugme_Click"/>
+        <Rectangle
+            Name="ListboxPravougaonik"
+            Fill="#413469"
+            Visibility="Hidden"
+            RadiusX="10"
+            RadiusY="10" 
+            Margin="51,27,73,109" 
+            Grid.Row="2" 
+            Grid.RowSpan="2"/>
+        <ListBox Background="Transparent"
+                 Visibility="Hidden"
+                 BorderThickness="0"
+                 Name="SaradniciListBox"
+            Margin="60,34,86,118" 
+            Grid.Row="2" Grid.RowSpan="2"/>
+        <Rectangle
+            Name="ListboxPravougaonikOrg"
+            Fill="#413469"
+            RadiusX="10"
+            RadiusY="10" 
+            Margin="50,138,73,-9" 
+            Visibility="Hidden"
+            Grid.Row="2" 
+            Grid.RowSpan="2"/>
+        <ListBox Background="Transparent"
+                 BorderThickness="0"
+                 Visibility="Hidden"
+                 Name="OrgListBox"
+            Margin="59,147,79,0" 
+            Grid.Row="2" Grid.RowSpan="2"/>
+    </Grid>
+</UserControl>

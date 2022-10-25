@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="HCI_Projekat.MVVM.View.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HCI_Projekat.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="703*"/>
+                <ColumnDefinition Width="67*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="187*"/>
+                <RowDefinition Height="138*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Unesite Vasu _Email Adresu"
+                   Foreground="Black"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Padding="67,0,0,0"
+                   FontSize="16" Height="32"
+                   Width="331" 
+                   Margin="230,10,169,217"
+                   Target="{Binding ElementName=EmailTxtBox}"/>
+            <TextBox 
+                 Style="{StaticResource EmailRegisterTextBox}"
+                Height="79"
+            Name="EmailTxtBox" Margin="39,27,31,153" Grid.ColumnSpan="2"/>
+
+            <Rectangle Fill="#3a0646"
+                   RadiusX="10"
+                   RadiusY="10"
+                   Stroke="Silver" Margin="230,190,161,43"/>
+
+            <Label Content="Unesite Vasu _Lozinku"
+                Foreground="Black"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+                Padding="110,0,0,0"
+                FontSize="16" Height="30" 
+               Margin="209,155,140,74" Width="381"
+               RenderTransformOrigin="0.623,0.698"
+               Target="{Binding ElementName=PasswordTxtBox}"/>
+            <PasswordBox
+            Height="46"
+            VerticalAlignment="Center"
+            Background="Transparent"
+            BorderThickness="0"
+                x:Name="PasswordTxtBox" Margin="252,190,169,23"/>
+            <Button Content="_Prijava na Sistem"
+                Height="50"
+                Margin="251,84,186,57"
+                Background="#131d5e"
+                Foreground="White" Click="Button_Click" AutomationProperties.AcceleratorKey="N" Grid.Row="1"/>
+
+        </Grid>
+    </Grid>
+</UserControl>

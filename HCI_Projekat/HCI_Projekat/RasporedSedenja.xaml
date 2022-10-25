@@ -1,0 +1,232 @@
+﻿<Window x:Class="HCI_Projekat.RasporedSedenja"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HCI_Projekat"
+        mc:Ignorable="d"
+        Height="700" 
+        Width="1100"
+        Title="Aplikacija za Rezervaciju Proslava - Raspored Sedenja"
+        ResizeMode="NoResize"
+        Background="Transparent">
+    <Window.Resources>
+        <Image x:Key="Lupa" Source="pack://application:,,,/Images/lupa.png"/>
+    </Window.Resources>
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.RowSpan="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#131d5e" Offset="0" />
+                    <GradientStop Color="#3a0646" Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Fill="white" Grid.Column="2"/>
+        <TextBox Text="Raspored Sedenja Gostiju" 
+                 BorderThickness="0"
+                 Background="Transparent"
+                 Foreground="Black"
+                 FontSize="30" 
+                 Margin="169,13,293,602" Grid.Column="2"/>
+        <Button Grid.Column="2" 
+                FontSize="17"
+                Foreground="#e6e6e6"
+                Background="#131d5e"
+                Content="Dodaj Sto"
+                Margin="674,96,20,516"/>
+        <Rectangle Fill="#CFCFCF" Margin="194,219,-263,439" RenderTransformOrigin="0.5,0.5" Grid.Column="2">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="89.906"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Button Grid.Column="2" 
+            FontSize="16"
+            Foreground="White"
+            Background="#9c2a28"
+            Content="Ukloni Sve Stolove"
+            Margin="674,593,20,20"/>
+        <Button Grid.Column="2" 
+            FontSize="17"
+            Foreground="White"
+            Background="#131d5e"
+            Content="Ukloni Sto"
+            Margin="674,173,20,441"/>
+        <TextBox Text="Unesite Ime i Prezime Gosta"
+                 Height="30"
+                 FontSize="17"
+                 Background="Transparent"
+                 Foreground="White"
+                 BorderThickness="0"
+                 Grid.ColumnSpan="3" 
+                 Margin="7,29,840,612"/>
+        <TextBox Style="{StaticResource RasporedTextBox}" 
+            Margin="-16,59,840,549"
+            RenderTransformOrigin="0.5,0.5"
+            x:Name="ImePrezTxtBot" Grid.ColumnSpan="3"/>
+        <Button FontSize="17"
+            Foreground="White"
+            Background="#131d5e"
+            Content="Dodaj Gosta na Spisak"
+            Margin="17,122,16,490" Click="Button_Click"/>
+        <Rectangle Fill="#e6e6e6" Margin="-61,197,0,461"/>
+        <TextBox Text="Spisak Gostiju"
+            Height="30"
+            FontSize="17"
+            Background="Transparent"
+            Foreground="White"
+            BorderThickness="0" 
+            Margin="58,224,10,417"/>
+        <ListBox Name="SpisakGostijuListBox"
+                 SelectionMode="Multiple"
+                 Background="Transparent"
+                 Foreground="#CFCFCF"
+                 FontSize="15"
+                 Width="210"
+                 HorizontalAlignment="Center"
+                 Margin="7,322,8,74">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="IsSelected" Value="{Binding Selected}" />
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+        <Button FontSize="17"
+            Foreground="White"
+            Background="#131d5e"
+            Content="Ukloni"
+            Margin="7,602,130,10" Click="Button_Click_2"/>
+        <TextBox Style="{StaticResource Raspored23TextBox}" 
+            Margin="-45,254,5,354"
+            RenderTransformOrigin="0.5,0.5"
+            x:Name="ImePrezTxtBot_Copy"/>
+        <Button FontSize="17"
+            Foreground="White"
+            BorderThickness="0"
+            x:Name="Dugme"
+            Margin="176,259,8,361" Click="Button_Click_1">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button FontSize="17"
+            Foreground="White"
+            Background="#9c2a28"
+            Content="Isprazni Spisak"
+            Margin="105,602,10,10" Click="Button_Click_3"/>
+        <Button Grid.Column="2" 
+            FontSize="16"
+            Foreground="White"
+            Background="#131d5e"
+            Content="Ucitaj Spisak Gostiju"
+            Margin="674,10,20,602" Click="Button_Click_4"/>
+        <Rectangle Fill="#CFCFCF" Margin="-233,246,394,412" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="89.906"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Fill="#CFCFCF" Margin="227,78,-66,580" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="179.828"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Fill="#413469"
+                   RadiusX="10"
+                   RadiusY="10"
+                   StrokeDashArray="2"
+                   StrokeThickness="3"
+                   Stroke="Silver" Margin="91,143,583,317" Grid.Column="2"/>
+        <TextBox Text="Sto Broj 1"
+                 FontSize="18"
+                 Background="Transparent"
+                 Foreground="Black"
+                 BorderThickness="0"
+                 Grid.Column="2" 
+                 Margin="144,113,598,516" Width="122"/>
+        <ListBox
+            x:Name="ListBox1"
+            Background="Transparent" 
+            BorderThickness="0"
+            Grid.Column="2" 
+            Margin="99,150,590,324"/>
+        <TextBox Text="Sto Broj 2"
+            FontSize="18"
+            Background="Transparent"
+            Foreground="Black"
+            BorderThickness="0"
+            Grid.Column="2" 
+            Margin="434,113,317,499" Width="113"/>
+        <TextBox Text="Sto Broj 3"
+            FontSize="18"
+            Background="Transparent"
+            Foreground="Black"
+            BorderThickness="0"
+            Grid.Column="2" 
+            Margin="144,384,599,245" Width="121" RenderTransformOrigin="0.496,0.476"/>
+        <TextBox Text="Sto Broj 4"
+            FontSize="18"
+            Background="Transparent"
+            Foreground="Black"
+            BorderThickness="0"
+            Grid.Column="2" 
+            Margin="434,384,317,245" RenderTransformOrigin="0.357,0.595" Width="113"/>
+        <Rectangle Fill="#413469"
+            RadiusX="10"
+            RadiusY="10"
+            StrokeDashArray="2"
+            StrokeThickness="3"
+            Stroke="Silver" Margin="91,420,583,40" Grid.Column="2"/>
+        <ListBox
+            x:Name="ListBox1_Copy"
+            Background="Transparent" 
+            BorderThickness="0"
+            Grid.Column="2" 
+            Margin="99,426,590,48"/>
+        <Rectangle Fill="#413469"
+            RadiusX="10"
+            RadiusY="10"
+            StrokeDashArray="2"
+            StrokeThickness="3"
+            Stroke="Silver" Margin="381,143,293,317" Grid.Column="2"/>
+        <ListBox
+            x:Name="ListBox1_Copy1"
+            BorderThickness="0"
+            Background="Transparent" 
+            Grid.Column="2" 
+            Margin="389,150,300,324"/>
+        <Rectangle Fill="#413469"
+            RadiusX="10"
+            RadiusY="10"
+            StrokeDashArray="2"
+            StrokeThickness="3"
+            Stroke="Silver" Margin="381,419,293,41" Grid.Column="2"/>
+        <ListBox
+            x:Name="ListBox1_Copy2"
+            Background="Transparent" 
+            BorderThickness="0"
+            Grid.Column="2" 
+            Margin="389,426,300,48"/>
+    </Grid>
+</Window>

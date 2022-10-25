@@ -1,0 +1,95 @@
+﻿<Window x:Class="HCI_Projekat.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HCI_Projekat"
+        xmlns:viewModel="clr-namespace:HCI_Projekat.MVVM.ViewModel"
+        mc:Ignorable="d"
+        Height="700" 
+        Width="1000"
+        Title="Aplikacija za Rezervaciju Proslava - Menu Klijenta"
+        ResizeMode="NoResize"
+        Background="Transparent">
+
+    <Window.DataContext>
+        <viewModel:UserViewModel/>
+    </Window.DataContext>
+
+    <Border Background="White">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="210"/>
+                <ColumnDefinition Width="44*"/>
+                <ColumnDefinition Width="117*"/>
+                <ColumnDefinition Width="515*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Rectangle Grid.RowSpan="2">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#131d5e" Offset="0" />
+                        <GradientStop Color="#3a0646" Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <StackPanel Grid.Row="1">
+                <RadioButton Content="Kreiraj Novu Proslavu"
+                             Height="50"
+                             Margin="0,2,0,0"
+                             Foreground="White"
+                             IsChecked="True"
+                             FontSize="16"
+                             Style="{StaticResource KorisnickoDugme}"
+                             Command="{Binding UserKrProslavuCommand}"/>
+                <RadioButton Content="Prikaz Trenutnih Proslava"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="16"
+                             Style="{StaticResource KorisnickoDugme}"
+                             Command="{Binding UserTrenutneProslaveCommand}"/>
+                <RadioButton Content="Prikaz Gotovih Proslava"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="16"
+                             Style="{StaticResource KorisnickoDugme}"
+                             Command="{Binding UserGotoveProslaveCommand}"/>
+                <Button Content="Odjavi Se"
+                        Margin="0,450,0,0"
+                        Height="54"
+                        FontSize="16"
+                        BorderThickness="0"
+                        Style="{StaticResource OdjavaDugme}"
+                        Padding="10,0,0,0"
+                        Foreground="White"
+                        Background="Transparent" RenderTransformOrigin="0.517,-1.167" 
+                        Width="210" Click="Button_Click"/>
+
+
+            </StackPanel>
+            <Rectangle Grid.ColumnSpan="4" 
+                       Margin="0,0,0,760" 
+                       RenderTransformOrigin="0.5,0.5" 
+                       Grid.RowSpan="2">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" 
+                                         StartPoint="0.5,0">
+                        <GradientStop Color="#131d5e" Offset="0" />
+                        <GradientStop Color="#3a0646" Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}" Grid.ColumnSpan="3"/>
+
+
+        </Grid>
+    </Border>
+
+</Window>
